@@ -11,252 +11,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>My portfolio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 
+<link rel="stylesheet" href="./style.css">
 </head>
 
-<style>
-    * {
-        margin: 0px;
-        padding: 0px;
-    }
-
-    body,
-    p {
-        font-size: 17px;
-    }
-
-
-
-    html,
-    body {
-        height: 100%;
-        width: 100%;
-
-    }
-
-    @import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300&family=Ubuntu:wght@300&display=swap');
-
-
-    body {
-        background-color: #edf1fd;
-
-        /*         background-image: url("https://images.pexels.com/photos/1229861/pexels-photo-1229861.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"); */
-        background-attachment: fixed;
-        color: black;
-        font-family: 'Rowdies', cursive;
-        font-family: 'Ubuntu', sans-serif;
-        box-sizing: border-box;
-    }
-
-    .thumbnail {
-        /*     margin: 0px;
-/* margin-right:0px; */
-        /*         font-size:24px; */
-        float: right;
-        margin-right: 25px;
-        margin-top: 28px;
-        position: sticky;
-        top: 0;
-        /*   left: 0; */
-        right: 0;
-        z-index: 999;
-
-    }
-
-    h1 {
-        color: rgb(18, 155, 155);
-        font-weight: 700;
-        background-color: #dfdfe0;
-    }
-
-    .thumbnail {
-        border: 1px solid black;
-    }
-
-    a {
-        margin: 0%;
-        padding: 18px;
-        text-decoration: none;
-        /*         border: 0px solid white; */
-        border-radius: 15px;
-        color: #000080;
-        font-weight: 600;
-
-    }
-
-    /*     a : hover {
-        background-color: green;
-    } */
-
-    a {
-        width: 50px;
-        height: 30px;
-        font-size: 20px;
-
-    }
-
-    #nav {
-        padding-left: 5px;
-        padding-top: 10px;
-        gap: 25%;
-        overflow: hidden;
-
-    }
-
-    @media screen and (max-width: 600px) {
-        a {
-            width: 100%;
-            font-size: 14px;
-        }
-    }
-
-    #nav {
-        /*         float: left; */
-        margin-top: 0px;
-        ;
-        margin-left: -9px;
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: 999;
-        justify-content: space-evenly;
-
-
-
-    }
-
-
-    div {
-        display: absolute;
-    }
-
-    a:hover {
-        /*        background-color:whitesmoke; */
-        color: orange;
-        text-decoration: underline;
-        font-weight: 900;
-    }
-
-    img {
-        float: right;
-        max-width: 100%;
-        height: auto;
-    }
-
-
-    .img-thumbnail {
-        float: left;
-        border-radius: 33px;
-        margin-left: 30px;
-        margin-right: 0px;
-
-        margin-top: 0%;
-        border-color: green;
-        max-width: 100%;
-        height: 8%;
-    }
-
-
-
-
-
-
-
-    .container {
-        display: flexbox;
-    }
-
-
-    /*image responsive query  */
-    img {
-        max-width: 100%;
-        height: auto;
-    }
-
-    <picture><source srcset="image-high-res.jpg"media="(min-width: 1200px)"><source srcset="image-medium-res.jpg"media="(min-width: 800px)"><source srcset="image-low-res.jpg"media="(min-width: 400px)"><img src="image-medium-res.jpg"alt="A responsive image"></picture>img {
-        object-fit: contain;
-    }
-
-    p {
-        text-align: center;
-        padding: 18px;
-    }
-
-    /*     p:hover {
-        color: darkblue;
-        background-color: lightyellow;
-    }
- */
-    /*     body:hover {
-        background-color: gold;
-        color: black;
-
-    }
- */
-    img:hover {
-        border-color: #edf1fd;
-        border-width: 5px;
-        /*         border-radius: 15%; */
-    }
-
-
-    #nav {
-        height: auto;
-        background: #edf1fd;
-        width: max-content;
-        justify-content: center;
-    }
-
-    ul li {
-        list-style: none;
-    }
-
-    @media screen and (max-width:480px) {
-        .thumbnail {
-            visibility: hidden;
-        }
-    }
-
-    #nav {
-        height: 40px;
-    }
-
-    .thumbnail {
-        margin-top: 10px;
-
-
-    }
-
-
-    @media screen and (max-width:600px) and(min-width:480px) {
-        .hero-section {
-            display: flex;
-            flex-direction: column;
-
-        }
-    }
-
-    .right-section center h1 {
-        margin-top: 10%;
-    }
-
-    @media screen and (max-width:480px) {
-        .img-thumbnail {
-            border-radius: 20%;
-            height: 320px;
-            justify-content: center;
-            align-items: center;
-            margin-left: 55px;
-
-        }
-    }
-</style>
 
 <body>
-
+    <!-- adding loader into the page -->
+    <div id="preloader"data-aos="none">
+        <div id="loader"></div>
+    </div>
+    
     <!--     Thumbnail code is here -->
+<div id="main">
+
     <div data-aos="fade-down">
 
         <a href="https://github.com/CodeWithTheSaurabh?tab=repositories"><img
@@ -291,7 +60,7 @@
 
 
             <div class="profile">
-                <img src="https://github.com/SoftTechSourabh/portfolio.github.io/blob/main/IMG-20230107-WA0013.jpg?raw=true"
+                <img src="sourabh.jpeg"
                     class="img-thumbnail" alt="Check-server" width="250">
 
             </div>
@@ -309,12 +78,12 @@
 
                     <h1 style="margin-left: 0%; display: inline-block;
 /*   vertical-align: top; */
-  overflow: auto; 
-">WELCOME TO MY WORLD !</h1>
+  overflow: auto; ">WELCOME TO MY WORLD !</h1>
 
 
 
 
+<!--  this is the text paragraph -->
 
                     <h2 class="myName" style="margin-left: 0%;"> Hi, I'm <b
                             style="color:red; background-color:  #dfdfe0; font-weight: 900; font-size: 40px; font-style: italic;">Sourabh
@@ -322,10 +91,15 @@
 
 
 
-
+<!-- 
                     <h2 style="margin-left: 0%;"> a <b style="color:#0000B0 ;font-weight:bolder; 
 font-size:30px;">Developer.</b>
-                    </h2>
+                    </h2> -->
+
+<br>
+
+                    <h2 style="margin-left: 0%; color:brown ; font-weight: bolder;font-size:30px;" > &lt; a <span class="type-text"></span>/&gt;</h2>
+
 
                 </center>
             </div>
@@ -443,7 +217,7 @@ font-size:30px;">Developer.</b>
                         
                             <br>
                         <li style="font-size: 130%;">
-                          CHECK PL-IR (Indian Railway)
+                          CHECK PL-NUMBER (Indian Railway)
                             <a href="https://codewiththesaurabh.github.io/checkPL/">
                                 click➲
                             </a>
@@ -465,6 +239,21 @@ font-size:30px;">Developer.</b>
                             </a>
                         </li>
 
+                        <br>
+                        <li style="font-size: 130%;">
+                          PROJECT-FOR-LOVE-BIRDS
+                            <a href="https://codewiththesaurabh.github.io/valantineSpecial/">
+                                click➲
+                            </a>
+                        </li>
+
+                        <br>
+                        <li style="font-size: 130%;">
+                          COUNTER-APPLICATION
+                            <a href="https://codewiththesaurabh.github.io/Counter-app/">
+                                click➲
+                            </a>
+                        </li>
                         
 
                     </ul>
@@ -525,7 +314,7 @@ font-size:30px;">Developer.</b>
             </center>
 
 
-
+        </div>
         </div>
     </div>
 
@@ -537,7 +326,7 @@ font-size:30px;">Developer.</b>
 
     </div>
 
-    <div id="bottom" style="width:100% ;height:auto% ; background-color:blue ;">
+    <div id="bottom" style="width:100% ;height:auto ; background-color:blue ;">
         <center>
 
             <b>
@@ -546,32 +335,19 @@ font-size:30px;">Developer.</b>
             </b>
         </center>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
-
-
-            //for smoothly move scroll down
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-
-                    document.querySelector(this.getAttribute('href')).scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                });
-            });
-
-           // data aos
-        </script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-        AOS.init({
-            offset: 200,
-            duration: 1100,
-        });
-    </script>
-
-
+    
+    <!-- JS -->
+    <script src="./script.js"></script>
+       <!-- // data aos -->
+    
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init({
+        offset: 200,
+        duration: 1100,
+    });
+</script>
+    
 </body>
 
 </html>
